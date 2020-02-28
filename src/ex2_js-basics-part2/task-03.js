@@ -1,26 +1,26 @@
-function even_odd_zeros (array) {
+function getEvenOddZero(array) {
   let evenNumb = 0;
   let oddNumb = 0;
   let zeroElmnt = 0;
-    for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (
       array[i] === 0) {
-        zeroElmnt++
-      }
+      zeroElmnt++
+    }
     if (
       array[i] % 2 !== 0
       && typeof array[i] === 'number'
       && array[i] !== 0) {
-        oddNumb++;
+      oddNumb++
     }
     if (
       array[i] % 2 === 0
       && typeof array[i] === 'number'
       && array[i] !== 0) {
-        evenNumb++
-      }
+      evenNumb++
+    }
+  }
+  let emptyArr = [evenNumb, oddNumb, zeroElmnt];
+  return emptyArr;
 }
-let emptyArr = [evenNumb, oddNumb, zeroElmnt];
-   return emptyArr;
-}
-  module.exports = even_odd_zeros
+module.exports = getEvenOddZero;
