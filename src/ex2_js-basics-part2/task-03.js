@@ -1,26 +1,18 @@
 function getEvenOddZero(array) {
-  let evenNumb = 0;
-  let oddNumb = 0;
-  let zeroElmnt = 0;
+  let counter = [0, 0, 0];
   for (let i = 0; i < array.length; i++) {
-    if (
-      array[i] === 0) {
-      zeroElmnt++
+    if (array[i] === 0) {
+      counter[2]++
     }
-    if (
-      array[i] % 2 !== 0
-      && typeof array[i] === 'number'
-      && array[i] !== 0) {
-      oddNumb++
+    if (array[i] % 2 !== 0 && typeof array[i] === 'number' && array[i] !== 0) {
+      counter[1]++
     }
-    if (
-      array[i] % 2 === 0
-      && typeof array[i] === 'number'
-      && array[i] !== 0) {
-      evenNumb++
+    if (array[i] % 2 === 0 && typeof array[i] === 'number' && array[i] !== 0) {
+      counter[0]++
     }
   }
-  let emptyArr = [evenNumb, oddNumb, zeroElmnt];
-  return emptyArr;
+  console.log(`четных: ${counter[0]}; нечетных: ${
+    counter[1]}; нуль: ${counter[2]}`);
+  return counter;
 }
 module.exports = getEvenOddZero;
