@@ -1,5 +1,4 @@
 function copyTheObj(object) {
-  let objectCopy = Object.assign({}, object);
-  return objectCopy;
+  return Object.assign({}, object);
 }
 module.exports = copyTheObj;

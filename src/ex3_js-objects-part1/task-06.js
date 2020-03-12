@@ -1,7 +1,7 @@
 function getDeepCopy(object) {
 
-  var emptyArr = [];
-  var emptyObj = {};
+  let emptyArr = [];
+  let emptyObj = {};
 
   if (object instanceof Array) {
     for (let key of object) {

@@ -1,4 +1,4 @@
-function isThereProp(prop, object) {
+function assignNewProp(prop, object) {
   if (prop in object) {
     return true;
   } else {
@@ -6,4 +6,4 @@ function isThereProp(prop, object) {
   }
   return object;
 }
-module.exports = isThereProp;
+module.exports = assignNewProp;
