@@ -1,6 +1,8 @@
-function camelize(str) {
-  return str
+function getLowerCase(string) {
+  return string
+    .toLowerCase()
     .split(' ')
-    .map((word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1))
+    .map((word, i) => i === 0 ? word : word[0].toUpperCase() + word.slice(1))
     .join('');
 }
+module.exports = getLowerCase;
