@@ -1,11 +1,12 @@
-function countElements(string) {
-  let obj = {}
-  if (string.includes('h')) {
-    obj = obj[string];
+function countSymbols(string) {
+  let obj = string
+    .split('')
+    .reduce((data, symbol) => {
+      data[symbol] = (data[symbol] || 0) + 1;
+      return data;
+    }, {});
+  for (let key in obj) {
+    console.log(`${key} : ${obj[key]}`);
   }
-  else {
-    ;
-  }
-  console.log(obj);
 }
-countElements('hello')
+module.exports = countSymbols;
