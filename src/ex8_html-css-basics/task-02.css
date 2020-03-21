@@ -1,0 +1,10 @@
+hr {
+  border-bottom: 3px solid silver;
+}
+.nestedAndDescr {
+  background-color: #00BFFF;
+}
+#mainImg {
+  height: 350px;
+  width: 400px;
+}
