@@ -1,9 +1,9 @@
-function map(array, callback) {
-  let answer = [];
+function mapAnalog(array, callback) {
+  let newArr = [];
   for (let i = 0; i < array.length; i++) {
-    answer.push(callback(array[i], i, array));
+    newArr.push(callback(array[i], i, array));
   }
-  return answer;
+  return newArr;
 }
 
-module.exports = map;
+module.exports = mapAnalog;
