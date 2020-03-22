@@ -5,5 +5,4 @@ function mapAnalog(array, callback) {
   }
   return newArr;
 }
-
 module.exports = mapAnalog;

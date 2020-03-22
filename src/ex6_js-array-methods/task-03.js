@@ -6,5 +6,4 @@ function everyAnalog(array, callback) {
   }
   return true;
 }
-
 module.exports = everyAnalog;

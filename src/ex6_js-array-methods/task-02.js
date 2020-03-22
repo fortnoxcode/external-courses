@@ -6,5 +6,4 @@ function someAnalog(array, callback) {
   }
   return false;
 }
-
 module.exports = someAnalog;
