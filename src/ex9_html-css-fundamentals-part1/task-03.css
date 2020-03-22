@@ -1,0 +1,29 @@
+.checkout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
+  font-family: 'Verdana', cursive;
+}
+.button {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 2px 20px -5px grey;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+ }
+.button:hover {
+  background-position: right center; 
+  color: #ffffff;
+}
+.button {
+  background-image: linear-gradient(to right, #000000, #FFFFFF);
+}
