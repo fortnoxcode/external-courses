@@ -1,4 +1,4 @@
 function reverseString(string) {
-  return Array.from(string).reverse().join('');
+  return string.split('').reverse().join('');
 }
 module.exports = reverseString;
