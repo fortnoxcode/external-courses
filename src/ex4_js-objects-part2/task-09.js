@@ -1,7 +1,11 @@
 function pasteString(mainString, insString, num) {
-  num += 1;
   let newSentence = mainString.split(' ');
-  let newArr = [...newSentence.slice(0, num), insString, ...newSentence.splice(num)]
-    return newArr.join(' ');
+  let newArr = [
+        // num + 1 – это костыль, без этого тесты не проходят (я не знаю, как без костыля)
+        ...newSentence.slice(0, num + 1),
+        insString,
+        ...newSentence.splice(num + 1)
+  ]
+  return newArr.join(' ');
 }
 module.exports = pasteString;
