@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>task 02</title>
-    <link rel="stylesheet" href="task-021.css">
+    <link rel="stylesheet" href="task-02.css">
   </head>
   <body>
     <div class="personalData">
@@ -18,7 +18,7 @@
               <input type="text" name="First Name" placeholder="your name">
             </label>
 
-            <label for="middleName">Your middle name:
+            <label for="middleName">Middle name:
               <input type="text" name="Middle Name" placeholder="your middle name">
             </label>
 
@@ -54,7 +54,51 @@
             <label for="photography">Photography:
               <input type="file" name="file">
             </label>
-        </fieldset>
+
+            <hr>
+            <label for="title">Title:
+              <select class="job" name="title" multiple="multiple" size="6">
+              <optgroup label="Technologies">
+                <option value="webmaster">Web master</option>
+                <option value="admindb">Database administrator</option>
+                <option value="designer">Computer-aided design</option>
+              </optgroup>
+              <optgroup label="Finance">
+                <option value="economist">Economic planning</option>
+                <option value="manager">Management accounting</option>
+                <option value="accounter">Budgeting and planning</option>
+              </optgroup>
+            </select>
+            </label>
+
+            <label for="salary">Salary:
+              <input type="range" name="salary" value="50" min="0" max="100" step="10">
+            </label>
+            <textarea name="bio" cols="60" rows="15" placeholder="Tell us about yourself..."></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact information</legend>
+              <label for="siteurl">Site:
+                <input type="url" name="siteurl">
+              </label>
+
+              <label for="email">E-mail:
+                <input type="email" name="email">
+              </label>
+
+              <label for="phonenumber">Phone:
+                <input type="tel" name="phonenumber">
+              </label>
+          </fieldset>
+
+          <label for="password">Password:
+            <input type="password" name="password" placeholder="your password">
+          </label>
+          <div class="subm-res-btn">
+            <input type="submit">
+            <input type="reset">
+          </div>
       </form>
     </div>
   </body>

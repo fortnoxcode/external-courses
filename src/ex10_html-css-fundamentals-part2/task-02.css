@@ -1,7 +1,10 @@
 label {
   display: block;
-  margin-bottom: 20px
+  margin: 10px 0px 10px 5px;
 }
 input {
   margin-left: 3px;
+}
+.subm-res-btn {
+  margin-top: 15px;
 }
