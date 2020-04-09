@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>task 02</title>
+    <link rel="stylesheet" href="task-021.css">
+  </head>
+  <body>
+    <div class="personalData">
+      <form class="personalData" action="http://httpbin.org/post" method="post">
+        <fieldset>
+          <legend>Personal data</legend>
+            <label for="surname">Surname:
+              <input type="text" name="Surname" placeholder="your surname">
+            </label>
+
+            <label for="firstName">First name:
+              <input type="text" name="First Name" placeholder="your name">
+            </label>
+
+            <label for="middleName">Your middle name:
+              <input type="text" name="Middle Name" placeholder="your middle name">
+            </label>
+
+            <label for="gender"> You are:
+              <input type="radio" name="gender" value="male">
+              <span>male</span>
+              <input type="radio" name="gender" value="female">
+              <span>female</span>
+            </label>
+
+            <label for="age">Age:
+              <input type="number" name="age" min="18" max="101" placeholder="age">
+            </label>
+
+            <label for="residence">Country of Residence:
+              <select name="residence">
+                <optgroup label="Select the country in which you reside">
+                  <option value="russia">Russia</option>
+                  <option value="usa" selected>USA</option>
+                  <option value="canada">Canada</option>
+                  <option value="germany">Germany</option>
+                </optgroup>
+              </select>
+            </label>
+
+            <label for="city"> City:
+              <input type="checkbox" name="city" value="ryazan">
+              <span>Ryazan</span>
+              <input type="checkbox" name="city" value="moscow">
+              <span>Moscow</span>
+            </label>
+
+            <label for="photography">Photography:
+              <input type="file" name="file">
+            </label>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
