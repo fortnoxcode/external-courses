@@ -1,0 +1,9 @@
+#customers {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.1em;
+  margin: 0 auto;
+}
+
+.name  {
+  text-transform: capitalize;
+}
