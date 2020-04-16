@@ -10,3 +10,7 @@ input {
 .subm-res-btn {
   margin-top: 15px;
 }
+
+.gender, .city {
+  display: inline-flex;
+}
