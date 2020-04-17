@@ -1,0 +1,70 @@
+.fieldset {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.data {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  margin: 18px 10px;
+  font-size: 16pt;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  transition: all .1s linear;
+  color: gray;
+  opacity: 0;
+  z-index: -1;
+  font-size: 9pt;
+}
+
+.data-title {
+  border-bottom: 1px solid gray;
+  padding: 8px 0px 10px 0px;
+}
+
+.data-price {
+  width: 34%;
+  padding: 8px 0px 10px 0px;
+}
+
+.data-location {
+  border-left: 1px solid gray;
+  width: 64%;
+  padding: 8px 0px 10px 0px;
+}
+
+.data-description {
+  border-top: 1px solid gray;
+  padding: 8px 0px 10px 0px;
+}
+
+.input:invalid+label {
+  opacity: 0;
+  top: 10px;
+  color: gray;
+}
+
+.input:valid+label {
+  top: 3px;
+  opacity: 1;
+}
+
+.input:focus+label {
+  color: blue;
+  font-size: 12pt;
+}
