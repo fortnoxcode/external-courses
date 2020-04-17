@@ -19,7 +19,7 @@ const setSlide = (index) => {
   }
   if (typeof index === 'number') {
     currSlide = index;
-    document.getElementById('slider-container').src = images[currSlide] || 0;
+    document.getElementById('slider-container').src = images[currSlide] || images[0];
   }
 };
 
