@@ -51,6 +51,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 181px;
   height: 33px;
   left: 0px;
@@ -63,7 +64,7 @@ header {
   background-color: #d8d8d8;
 }
 
-.plus-icon, .newlist-create-btn-text, , .arrow-dropdown-btn {
+.plus-icon, .newlist-create-btn-text, , .arrow-dropdown-btn, {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,6 +90,13 @@ header {
   background-color: #ffffff;
   border-radius: 100px;
   border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plus-icon {
+  margin-top: 4px;
 }
 
 .user-icon:hover, .arrow-dropdown-btn:hover, .more-btn:hover,
