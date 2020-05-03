@@ -1,0 +1,123 @@
+body {
+  background: #40cfb7;
+}
+
+.animations {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 25px solid #000;
+  border-top: 20px solid white;
+  border-radius: 50%;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    border-top: 25px solid white;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    border-top: 25px solid white;
+  }
+}
+
+.jump-ball {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  position: relative;
+  border-left: 40px solid black;
+  border-right: 40px solid black;
+  margin-top: 50px;
+}
+
+.bouncing-ball {
+  display: flex;
+  width: 500px;
+  margin: 50px;
+}
+
+.jump-ball::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  border-radius: 100%;
+  position: absolute;
+  top: 35px;
+  animation-name: jump;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(.15, .27, .85, .73);
+  animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 270px;
+  }
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+  margin: 50px;
+  animation-name: animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+  0% {
+    border-radius: 100%;
+    background: linear-gradient(35deg, #fffed6, #fcfbca);
+  }
+
+  15% {
+    border-radius: 0%;
+    background: linear-gradient(35deg, #fcfbca, #fcfbbb);
+  }
+
+  30% {
+    border-radius: 0%;
+    background: linear-gradient(35deg, #fcfbbb, #fffeb0);
+    transform: scale(1, 1);
+  }
+
+  45% {
+    border-radius: 0%;
+    background: linear-gradient(35deg, #fffeb0, #fffea1);
+    transform: scale(0.5, 0.5) skew(20deg, 10deg) rotate(0deg);
+  }
+
+  60% {
+    border-radius: 0%;
+    background: linear-gradient(35deg, #fffea1, #fffe8f);
+    transform: scale(0.5, 0.5) skew(20deg, 10deg) rotate(360deg);
+  }
+
+  75% {
+    border-radius: 0%;
+    background: linear-gradient(35deg, #fffe8f, #fffe70);
+    transform: scale(1, 1) skew(0deg, 0deg) rotate(0deg);
+  }
+
+  100% {
+    border-radius: 100%;
+    background: linear-gradient(35deg, #fffe70, #fffe4d);
+    transform: scale(1, 1) skew(0deg, 0deg) rotate(0deg);
+  }
+}
