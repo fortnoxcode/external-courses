@@ -1,15 +1,17 @@
 .content {
   text-align: center;
   border: 10px dotted black;
-  border-radius: 25px
+  border-radius: 25px;
 }
+
 .lists {
   outline: 5px solid red;
   margin-bottom: 30px;
 }
+
 .links {
   box-shadow:
     0 0 0 5px hsl(60, 100%, 50%),
     0 0 0 10px hsl(66, 74%, 53%),
-    0 0 0 15px hsl(66, 51%, 69%);   
+    0 0 0 15px hsl(66, 51%, 69%);
 }
