@@ -1,9 +1,22 @@
-button {
-  position: relative;
-  display: block;
+.btn-background {
   width: 250px;
-  height: 52px;
-  margin: 100px auto;
+  height: 50px;
+  color: #525252;
+  background: linear-gradient(to bottom, #e0e0e0 0%, #d4d4d4 50%, #c9c9c9 51%, #a8a7a7 100%);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px 1px #8f8f8f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-btn {
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 240px;
+  height: 45px;
   font-family: "Times New Roman", Arial, serif;
   font-size: 20px;
   font-weight: bold;
@@ -16,20 +29,8 @@ button {
   box-shadow: 0 1px 3px 1px #8f8f8f;
 }
 
-button:before {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  width: 260px;
-  height: 70px;
-  top: -12px;
-  left: -9px;
-  background: #cbcbcb;
-  border: #ffffff 2px solid;
-  border-radius: 15px;
-  box-shadow: 0 0 0 2px #636262;
-}
-
-.star {
-  margin: 0px 5px 0px 5px;
+.checkout-btn > span {
+  height: inherit;
+  display: flex;
+  align-items: center;
 }
