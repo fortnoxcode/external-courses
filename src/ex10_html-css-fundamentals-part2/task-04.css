@@ -273,6 +273,7 @@ a:visited {
 
   .slider {
     display: flex;
+    justify-content: center;
     margin-top: 146px;
   }
 
@@ -313,7 +314,7 @@ a:visited {
     background-image: url(img/slider-back-orange.png);
   }
 
-  .slider-item p {
+  .slider-item span {
     margin: 12px;
     font-size: 14px;
   }
@@ -335,7 +336,6 @@ a:visited {
 
   .slider div:nth-child(1) {
     max-width: 825px;
-    width: 100%;
   }
 
   .slider div:nth-child(5) {
