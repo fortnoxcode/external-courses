@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+}
+
+.orderedList {
+  font-family: 'Montserrat','Arial', 'Verdana', sans-serif;
+  font-size: 1.2rem;
+  background-color: rgb(36, 237, 190);
+}
+
+.unorderedList {
+  font-size: 120%;
+  background-image: url(https://www.3dargeyapi.com/wp-content/uploads/2018/11/Creative-41-300x238.jpg);
+  background-repeat: no-repeat;
+}
+
+.nestedAndDescr {
+  background-color: #00BFFF;
+}
+
+.linkTo:hover {
+  background-color: #F89B4D;
+}
+
+.paragraphs {
+  font-family: cursive;
+  text-align: center;
+}
+hr {
+  border-bottom: 3px solid silver;
+}
+
+#mainImg {
+  height: 350px;
+  width: 400px;
+  cursor: no-drop;
+}
+
+#shrek {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
