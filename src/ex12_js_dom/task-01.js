@@ -1,34 +1,36 @@
 const images = [
   'https://img.itch.zone/aW1nLzI3MjAzMzUuanBn/original/PKJHwd.jpg',
-  'https://www.anapa.vip/upload/iblock/18f/18f6574d3c37e4f3b33e66f737560f1b.jpg',
+  'https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
   'https://images.wallpaperscraft.ru/image/ozero_gory_derevia_122294_800x600.jpg'
 ];
 
 let currSlide = 0;
 
-const setSlide = (index) => {
-  if (typeof index === 'string' && (index === '+' || index === '-')) {
-    let slide = currSlide + (index === '+' ? 1 : -1);
-    if (slide > images.length - 1) {
-      slide = 0;
-    }
-    if (slide < 0) {
-      slide = images.length - 1;
-    }
-    setSlide(slide);
-  }
-  if (typeof index === 'number') {
-    currSlide = index;
-    document.getElementById('slider-container').src = images[currSlide] || images[0];
-  }
+const setSlide = (slide) => {
+  currSlide = slide;
+  document.getElementById('slider-container').src = images[currSlide] || images[0];
 };
 
-document.onkeydown = (k) => {
-  k = k || window.event;
-  if (k.keyCode === 37) {
-    setSlide('+');
+const move = (next) => {
+  let slide = currSlide + (next ? 1 : -1);
+  if (slide > images.length - 1) {
+    slide = 0;
   }
-  if (k.keyCode === 39) {
-    setSlide('-');
+  if (slide < 0) {
+    slide = images.length - 1;
+  }
+  setSlide(slide);
+};
+
+window.onload = document.getElementById('slider-container').src = images[0];
+
+document.onkeydown = (ev) => {
+  const arrowRight = 39;
+  const arrowLeft = 37;
+  if (ev.keyCode === arrowLeft) {
+    move();
+  }
+  if (ev.keyCode === arrowRight) {
+    move(true);
   }
 };
