@@ -1,0 +1,24 @@
+tr {
+  background-color: #e4e9f3;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f6fa;
+}
+
+tr:hover td {
+  background: #e3e5e9;
+}
+
+td {
+  padding: 20px;
+  width: 7vw;
+  white-space: nowrap;
+}
+
+.columns th {
+  padding: 3px;
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+}

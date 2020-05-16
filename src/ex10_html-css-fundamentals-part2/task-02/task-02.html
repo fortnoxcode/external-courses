@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>task 02</title>
+  <link rel="stylesheet" href="task-02.css">
+</head>
+
+<body>
+  <div class="personalData">
+    <form class="personalData" action="http://httpbin.org/post" method="post">
+      <fieldset>
+        <legend>Personal data</legend>
+        <label for="surname">Surname:
+          <input id="surname" type="text" name="Surname" placeholder="your surname">
+        </label>
+
+        <label for="firstName">First name:
+          <input id="firstName" type="text" name="First Name" placeholder="your name">
+        </label>
+
+        <label for="middleName">Middle name:
+          <input id="middleName" type="text" name="Middle Name" placeholder="your middle name">
+        </label>
+
+        <span>You are: </span>
+        <div class="gender">
+          <label for="male">male
+            <input type="radio" id="male" name="gender" value="male">
+          </label>
+          <label for="female">female
+            <input type="radio" id="female" name="gender" value="female">
+          </label>
+        </div>
+
+        <label for="age">Age:
+          <input id="age" type="number" name="age" min="18" max="101" placeholder="age">
+        </label>
+
+        <label for="residence">Country of Residence:
+          <select id="residence" name="residence">
+            <optgroup label="Select the country in which you reside">
+              <option value="russia">Russia</option>
+              <option value="usa" selected>USA</option>
+              <option value="canada">Canada</option>
+              <option value="germany">Germany</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <span>City: </span>
+        <div class="city">
+          <label for="moscow">Moscow
+            <input id="moscow" type="checkbox" name="moscow" value="moscow">
+          </label>
+          <label for="ryazan">Ryazan
+            <input id="ryazan" type="checkbox" name="Ryazan" value="Ryazan">
+          </label>
+        </div>
+
+
+        <label for="photography">Photography:
+          <input id="photography" type="file" name="file">
+        </label>
+
+        <hr>
+        <label for="title">Title:
+          <select id="title" class="job" name="title" multiple="multiple" size="6">
+            <optgroup label="Technologies">
+              <option value="webmaster">Web master</option>
+              <option value="admindb">Database administrator</option>
+              <option value="designer">Computer-aided design</option>
+            </optgroup>
+            <optgroup label="Finance">
+              <option value="economist">Economic planning</option>
+              <option value="manager">Management accounting</option>
+              <option value="accounter">Budgeting and planning</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <label for="salary">Salary:
+          <input id="salary" type="range" name="salary" value="50" min="0" max="100" step="10">
+        </label>
+        <textarea name="bio" cols="60" rows="15" placeholder="Tell us about yourself..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact information</legend>
+        <label for="siteurl">Site:
+          <input id="siteurl" type="url" name="siteurl">
+        </label>
+
+        <label for="email">E-mail:
+          <input id="email" type="email" name="email">
+        </label>
+
+        <label for="phonenumber">Phone:
+          <input id="phonenumber" type="tel" name="phonenumber">
+        </label>
+      </fieldset>
+
+      <label for="password">Password:
+        <input id="password" type="password" name="password" placeholder="your password">
+      </label>
+      <div class="subm-res-btn">
+        <input type="submit">
+        <input type="reset">
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

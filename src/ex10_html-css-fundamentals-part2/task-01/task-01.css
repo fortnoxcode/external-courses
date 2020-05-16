@@ -1,0 +1,15 @@
+img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.circleImg img {
+  border-radius: 50%;
+}
+
+.maskImg img {
+  -webkit-mask-image: url(https://avatanplus.com/files/resources/mid/5b598ccdd6626164d5ce0436.png);
+  -webkit-mask-size: 270px;
+}

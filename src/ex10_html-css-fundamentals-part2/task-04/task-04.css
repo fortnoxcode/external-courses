@@ -1,0 +1,68 @@
+@import url("desktop.css");
+@import url("tablet.css");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  text-align: center;
+  cursor: pointer;
+}
+
+.logo span {
+  margin: 0;
+  font-size: 52px;
+  font-weight: bold;
+  color: #3687c4;
+}
+
+.search-form img {
+  margin: 0 13px;
+  width: 25px;
+  height: 25px
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.search-form img:hover {
+  filter: invert(45%) sepia(66%) saturate(2848%) hue-rotate(164deg) brightness(98%) contrast(101%)
+}
+
+.search-form input {
+  height: 40px;
+  width: 160px;
+  border: none;
+}
+
+.title__text {
+  display: flex;
+  justify-content: center;
+}
+
+.title__text-reg {
+  margin-top: 175px;
+  padding-left: 220px;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.title__text-bold {
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 58px;
+}
+
+.title__text-decor {
+  color: #bbedff;
+  font-size: 90px;
+}
