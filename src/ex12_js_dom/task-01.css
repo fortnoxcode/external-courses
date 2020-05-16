@@ -1,0 +1,42 @@
+body {
+  background: #424242
+}
+
+.slider {
+  width: 600px;
+  height: 400px;
+  border: 10px solid #878787;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+
+#slider-container {
+  width: 100%;
+  max-height: 100%;
+}
+
+.btns {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow-button {
+  background-color: white;
+  padding: 0px;
+  opacity: 0.4;
+  border-radius: 10px;
+}
+
+.arrow-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#prev-btn {
+  transform: scale(-1, 1);
+}
