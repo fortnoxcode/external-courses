@@ -95,45 +95,6 @@ header {
   justify-content: center;
 }
 
-.arrow-dropdown-btn-menu {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 140px;
-  height: 105px;
-  right: 9px;
-  top: 60px;
-  background-color: #EBECF0;
-  border-radius: 10px;
-}
-
-.dropdown-menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin-top: 10px;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.dropdown-menu-item:hover {
-  cursor: pointer;
-  background: #d8d8d8;
-  transition: 0.2s;
-}
-
-.arrow-dropdown-btn {
-  transform: rotate(0deg);
-  transition: transform 0.3s;
-}
-
-.arrow-dropdown-btn.open {
-  transform: rotate(180deg);
-  transition: transform 0.3s;
-}
-
 .plus-icon {
   margin-top: 4px;
 }
