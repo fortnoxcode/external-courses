@@ -1,43 +1,48 @@
-const Calculator = {
-  value: 0,
+class Calculator {
+  constructor() {
+    this.value = 0;
+  }
+
   add(num) {
-    if (typeof num === 'number' && !isNaN(num)) {
-      this.value += num;
-    }
+    this.value += num || 0;
     return this;
-  },
+  }
+
   subtract(num) {
-    if (typeof num === 'number' && !isNaN(num)) {
-      this.value -= num;
-    }
+    this.value -= num || 0;
     return this;
-  },
+  }
+
   multiply(num) {
-    if (typeof num === 'number' && !isNaN(num)) {
-      this.value *= num;
-    }
+    this.value *= num || 1;
     return this;
-  },
+  }
+
   divide(num) {
-    if (typeof num === 'number' && !isNaN(num)) {
-      this.value /= num;
-    }
+    this.value /= num || 1;
     return this;
-  },
+  }
+
   getResult() {
-    return this.value
-  },
+    return this.value;
+  }
+
   reset() {
     this.value = 0;
     return this;
-  },
-  setState(num) {
-    this.add(num);
-    return this;
-  },
-  async fetchData(callback) {
-    this.value = await callback(500);;
   }
-}
 
-module.exports = Calculator;
+  setState(num) {
+    this.value = num || 0;
+    return this;
+  }
+
+  fetchData(callback) {
+    let run = async (num) => callback(num);
+    run(500).then((num) => {
+      this.value = num;
+    })
+  }
+
+}
+module.exports = new Calculator();
