@@ -12,12 +12,14 @@ function createItem() {
   input.addEventListener('keydown', (event) => {
     if (event.keyCode === 13) {
       createItem();
+      updateCounter();
     }
   })
 
   input.addEventListener('blur', () => {
     if (!input.value) {
       newItem.remove()
+      updateCounter();
     }
   });
 
@@ -33,5 +35,6 @@ function createItem() {
       name: input.value
     });
     localStorage.setItem('data', JSON.stringify(data));
+    updateCounter();
   })
 }

@@ -29,6 +29,7 @@ function openMoreButton() {
       moreDropdown.remove();
       isMoreOpen = false;
       bindClicks();
+      updateCounter();
     });
   this.append(moreDropdown);
 };
