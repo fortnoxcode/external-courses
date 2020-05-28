@@ -1,7 +1,4 @@
-async function myFetch(link, options = {}) {
-  if (!link) {
-    throw new Error("link isn't defined");
-  }
+async function myFetch(url = '', options = {}) {
   if (options.method && options.method.toUpperCase() !== 'GET' && options.method.toUpperCase() !== 'POST') {
     throw new Error('Only GET and POST methods are allowed');
   }
@@ -20,7 +17,7 @@ async function myFetch(link, options = {}) {
         reject(xhr.status);
       }
     };
-    xhr.open(options.method || 'GET', link);
+    xhr.open(options.method || 'GET', url);
     xhr.send(options.body || null);
   });
 }
