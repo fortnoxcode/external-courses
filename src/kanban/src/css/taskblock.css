@@ -1,0 +1,131 @@
+.todoList {
+    padding-right: 22px;
+  }
+  
+  .todoList-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 282px;
+    max-height: calc(100vh - 174px);
+    padding: 12px;
+    padding-right: 0px;
+    color: #000;
+    background-color: #EBECF0;
+    border-radius: 10px;
+  }
+  
+  .todoList-input {
+    padding-left: 5px;
+    height: 35px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+  }
+  
+  .todoList-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 12px;
+    justify-content: space-between;
+  }
+
+  .more-btn {
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .more-btn:hover {
+    margin-right: 5px;
+  }
+
+  .todoList-items-container {
+    height: 100%;
+    padding-right: 12px;
+    overflow-y: auto;
+    width: 95%;
+  }
+  
+  .todoList-item {
+    background-color: white;
+    margin-bottom: 13px;
+  }
+  
+  .todoList-item.select {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 10px;
+    border: #0079bf 3px solid;
+    border-radius: 6px;
+  }
+  
+  .todoList ul {
+    list-style-position: outside;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-top: 0;
+  }
+  
+  .todoList li {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    width: 190px;
+  }
+  
+  .select {
+    background-color: #EBECF0;
+  }
+  
+  .todoList-point {
+    padding: 7px 8px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .todoList-point:hover {
+    background: #d8d8d8;
+  }
+
+  .todoList-footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #5E6C84;
+    width: 100%;
+    margin-top: 8px;
+  }
+  
+  .todoList-footer div:hover {
+    cursor: pointer;
+  }
+  .add-new-item-input {
+    border-radius: 5px;
+    padding-bottom: 11px;
+  }
+  .create-new {
+    outline: none;
+    height: 21px;
+  }
+  
+  .add-btn {
+    padding-right: 5px;
+  }
+  
+  .add-new-item-btn {
+    transition: 0.2s;
+  }
+  
+  .add-new-item-btn:hover {
+    padding-left: 10px;
+  }

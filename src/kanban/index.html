@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Kanban</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="shortcut icon" href="">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
     <div class="left-side-items">
       <div class="header-menu-btn">
         <div class="menu-btn">
-          <img src="img/header/menu.svg" alt="menu button">
+          <img src="src/img//header/menu.svg" alt="menu button">
         </div>
       </div>
       <div class="title">
@@ -24,192 +25,44 @@
     <div class="right-side-items">
       <div class="newlist-create-btn">
         <div class="plus-icon">
-          <img src="img/header/add.svg" alt="plus icon">
+          <img src="src/img//header/add.svg" alt="plus icon">
         </div>
         <span class="newlist-create-btn-text">Create new list</span>
       </div>
       <div class="user-menu">
         <div class="user-icon">
-          <img src="img/header/user.svg" alt="">
+          <img src="src/img//header/user.svg" alt="user icon">
         </div>
         <div class="arrow-dropdown-btn">
-          <img src="img/header/arrow.svg" alt="">
+          <img src="src/img//header/arrow.svg" alt="arrow dropdown">
         </div>
       </div>
     </div>
   </header>
   <main>
-    <div class="boardholder">
-      <div class="todoList" id="list-1">
-        <div class="todoList-container">
-          <div class="todoList-header">
-            <span>Backlog</span>
-            <div class="more-btn">
-              <img src="img/main/dots.svg" alt="more">
-            </div>
-          </div>
-          <div class="todoList-items-container">
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Login page – performance issues
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Sprint bugfix
-              </div>
-            </div>
-          </div>
-          <div class="todoList-footer">
-            <div class="add-new-item-btn">
-              <div class="add-btn">
-                <img src="img/main/plus.svg" alt="">
-              </div>
-              <span>Add card</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="todoList" id="list-2">
-        <div class="todoList-container">
-          <div class="todoList-header">
-            <span>Ready</span>
-            <div class="more-btn">
-              <img src="img/main/dots.svg" alt="more">
-            </div>
-          </div>
-          <div class="todoList-items-container">
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop page – performance issues
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Checkout bugfix
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop bug1
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop bug2
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop bug3
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop bug4
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop bug5
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop bug6
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Shop page – performance issues
-              </div>
-            </div>
-          </div>
-          <div class="todoList-footer">
-            <div class="add-new-item-btn">
-              <div class="add-btn">
-                <img src="img/main/plus.svg" alt="">
-              </div>
-              <span>Add card</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="todoList" id="list-3">
-        <div class="todoList-container">
-          <div class="todoList-header">
-            <span>In progress</span>
-            <div class="more-btn">
-              <img src="img/main/dots.svg" alt="more">
-            </div>
-          </div>
-          <div class="todoList-items-container">
-            <div class="todoList-item">
-              <div class="todoList-point">
-                User page – performance issues
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Auth bugfix
-              </div>
-            </div>
-          </div>
-          <div class="todoList-footer">
-            <div class="add-new-item-btn">
-              <div class="add-btn">
-                <img src="img/main/plus.svg" alt="">
-              </div>
-              <span>Add card</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="todoList" id="list-4">
-        <div class="todoList-container">
-          <div class="todoList-header">
-            <span>Finished</span>
-            <div class="more-btn">
-              <img src="img/main/dots.svg" alt="more">
-            </div>
-          </div>
-          <div class="todoList-items-container">
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Main page – performance issues
-              </div>
-            </div>
-            <div class="todoList-item">
-              <div class="todoList-point">
-                Main page bugfix
-              </div>
-            </div>
-          </div>
-          <div class="todoList-footer">
-            <div class="add-new-item-btn">
-              <div class="add-btn">
-                <img src="img/main/plus.svg" alt="">
-              </div>
-              <span>Add card</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="boardholder"></div>
   </main>
   <footer>
     <div class="footer-info">
       <div class="active-task">
-        Active tasks: &#60;N&#62;
+        Active tasks: <span id="activeTasks">&#60;N&#62;</span>
       </div>
       <div class="finished-task">
-        Active tasks: &#60;N&#62;
+        Finished tasks: <span id="finishedTasks">&#60;N&#62;</span>
       </div>
     </div>
     <div class="copyright">
       Kanban board by &#60;NAME&#62; ,&#60; YEAR&#62;
     </div>
   </footer>
+  <script src="src/js/addboard.js"></script>
+  <script src="src/js/dropdown.js"></script>
+  <script src="src/js/more.js"></script>
+  <script src="src/js/datamock.js"></script>
+  <script src="src/js/previoustask.js"></script>
+  <script src="src/js/addtask.js"></script>
+  <script src="src/js/counter.js"></script>
+  <!-- <script type="module" src="script.js"></script> -->
 </body>
 
 </html>
