@@ -1,4 +1,6 @@
-function createBoard(name = null) {
+import {bindClicks} from './main.js'
+
+export function createBoard(name = null) {
   let data = JSON.parse(localStorage.getItem('data'));
   let div = document.createElement('div');
   div.className = 'todoList';
@@ -8,7 +10,7 @@ function createBoard(name = null) {
     <div class="todoList-header">
       ${!name ? '<input class="todoList-input" placeholder="Board name">' : `<span>${name}</span>`}
       <div class="more-btn">
-        <img src="src/img//main/dots.svg" alt="more">
+        <img src="img/main/dots.svg" alt="more">
       </div>
     </div>
     <div class="todoList-items-container">
@@ -16,7 +18,7 @@ function createBoard(name = null) {
     <div class="todoList-footer">
       <div class="add-new-item-btn">
         <div class="add-btn">
-          <img src="src/img//main/plus.svg" alt="">
+          <img src="img/main/plus.svg" alt="">
         </div>
         <span id="cardadd">Add card</span>
       </div>

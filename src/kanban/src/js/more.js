@@ -1,4 +1,7 @@
-function openMoreButton() {
+import {updateCounter} from './counter.js'
+import {isMoreOpen, bindClicks} from './main.js'
+
+export function openMoreButton() {
   let data = JSON.parse(localStorage.getItem('data'));
   let moreDropdown = document.createElement('div');
 
@@ -7,7 +10,7 @@ function openMoreButton() {
     oldDropdown.remove();
   }
 
-  isMoreOpen = true;
+  isMoreOpen.update(true);
   moreDropdown.className = 'more-dropdown';
   moreDropdown.innerHTML = `
     <div class="more-dropdown-item">Delete</div>
@@ -27,7 +30,7 @@ function openMoreButton() {
       data.splice(index, 1);
       localStorage.setItem('data', JSON.stringify(data));
       moreDropdown.remove();
-      isMoreOpen = false;
+      isMoreOpen.update(false);
       bindClicks();
       updateCounter();
     });

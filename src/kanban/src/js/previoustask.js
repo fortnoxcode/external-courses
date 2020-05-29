@@ -1,10 +1,14 @@
-function getTasksFromPrevious(e) {
+import {updateCounter} from './counter.js'
+import {isAddCardOppen} from './main.js'
+import {setItem} from './addtask.js'
+
+export function getTasksFromPrevious(e) {
   let newData = JSON.parse(localStorage.getItem('data'));
   let container = this.parentElement.parentNode.getElementsByClassName('todoList-items-container')[0];
   let listN = Array.from(document.getElementsByClassName('todoList-items-container')).indexOf(container);
   let issues = newData[listN - 1].issues;
 
-  if (!issues.length || isAddCardOppen) {
+  if (!issues.length || isAddCardOppen.state) {
     e.preventDefault()
     return;
   }
@@ -19,7 +23,7 @@ function getTasksFromPrevious(e) {
 
   issues.forEach((item, i) => {
     let li = document.createElement('li');
-    isAddCardOppen = true;
+    isAddCardOppen.update(true);
     li.className = 'todoList-point';
     let name = document.createTextNode(item.name);
     li.appendChild(name);
@@ -33,7 +37,7 @@ function getTasksFromPrevious(e) {
           break;
         }
       }
-      isAddCardOppen = false;
+      isAddCardOppen.update(false);
       ul.parentNode.remove();
       const itemN = newData[listN - 1].issues.indexOf(item);
       let deletedIssue = issues.splice(itemN, 1);

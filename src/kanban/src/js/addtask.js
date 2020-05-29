@@ -1,5 +1,18 @@
-function createItem() {
-  let data = JSON.parse(localStorage.getItem('data'));
+import {updateCounter} from './counter.js'
+
+export function setItem(issue, board) {
+  let node = document.createTextNode(issue.name);
+  let newItem = document.createElement('div');
+  newItem.className = 'todoList-item'
+  let point = document.createElement('div');
+  point.appendChild(node)
+  point.setAttribute('id', issue.id);
+  point.className = 'todoList-point'
+  newItem.append(point);
+  board.getElementsByClassName('todoList-items-container')[0].append(newItem);
+}
+
+export function createItem() {
   let container = document.getElementsByClassName('todoList-items-container')[0];
   let newItem = document.createElement('div');
   let input = document.createElement('input');
@@ -24,6 +37,7 @@ function createItem() {
   });
 
   input.addEventListener('change', () => {
+    let data = JSON.parse(localStorage.getItem('data'));
     let div = document.createElement('div');
     div.className = 'todoList-point';
     let node = document.createTextNode(input.value);
@@ -31,7 +45,6 @@ function createItem() {
     input.remove();
     newItem.append(div);
     data[0].issues.push({
-      id: `task${setNextId('Backlog')}-Backlog`,
       name: input.value
     });
     localStorage.setItem('data', JSON.stringify(data));
