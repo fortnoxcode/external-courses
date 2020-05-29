@@ -1,0 +1,26 @@
+.more-dropdown {
+    position: absolute;
+      display: flex;
+     flex-direction: column;
+      background-color: #EBECF0;
+      width: 70px;
+     justify-content: center;
+      height: 60px;
+      text-align: center;
+     font-size: 14pt;
+      margin-top: 50px;
+      border: #0079bf 5px solid;
+      border-radius: 5px;
+    cursor: default;
+  }
+  
+  .more-dropdown-item {
+    background-color: #ffffff;
+    margin: 5px 3px;
+  }
+  .more-dropdown-item:hover {
+    cursor: pointer;
+    background: #d8d8d8;
+    transition: 0.2s;
+  }
+  

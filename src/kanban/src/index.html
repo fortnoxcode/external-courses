@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kanban</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="">
+</head>
+
+<body>
+  <header>
+    <div class="left-side-items">
+      <div class="header-menu-btn">
+        <div class="menu-btn">
+          <img src="img/header/menu.svg" alt="menu button">
+        </div>
+      </div>
+      <div class="title">
+        <div class="name">
+          Awesome Kanban Board
+        </div>
+      </div>
+    </div>
+    <div class="right-side-items">
+      <div class="newlist-create-btn">
+        <div class="plus-icon">
+          <img src="img/header/add.svg" alt="plus icon">
+        </div>
+        <span class="newlist-create-btn-text">Create new list</span>
+      </div>
+      <div class="user-menu">
+        <div class="user-icon">
+          <img src="img/header/user.svg" alt="user icon">
+        </div>
+        <div class="arrow-dropdown-btn">
+          <img src="img/header/arrow.svg" alt="arrow dropdown">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="boardholder"></div>
+  </main>
+  <footer>
+    <div class="footer-info">
+      <div class="active-task">
+        Active tasks: <span id="activeTasks">&#60;N&#62;</span>
+      </div>
+      <div class="finished-task">
+        Finished tasks: <span id="finishedTasks">&#60;N&#62;</span>
+      </div>
+    </div>
+    <div class="copyright">
+      Kanban board by &#60;NAME&#62; ,&#60; YEAR&#62;
+    </div>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
